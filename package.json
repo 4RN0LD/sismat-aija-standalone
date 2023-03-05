@@ -1,22 +1,32 @@
 {
-  "name": "sismat",
-  "version": "1.0.0",
-  "description": "Sistema Municipal de Administracion Tributaria",
-  "main": "main.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron .",
-    "pack": "build --dir",
-    "dist": "build"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "electron": "^14.0.0",
-    "electron-builder": "^22.11.7"
-  },
-  "dependencies": {
-    "express": "^4.17.1"
-  }
+    "name": "sismat",
+    "version": "2.0.0",
+    "description": "Sistema Municipal de Administracion Tributaria 2.0",
+    "main": "main.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "electron .",
+        "pack": "build --dir",
+        "dist": "build",
+        "build-windows": "electron-builder -w"
+    },
+    "keywords": [],
+    "author": "Arnold Norabuena",
+    "license": "ISC",
+    "build": {
+        "win": {
+            "icon": "build/icon.ico",
+            "extraFiles": [{
+                "from": "ImpuestoPredial",
+                "to": "ImpuestoPredial"
+            }]
+        }
+    },
+    "devDependencies": {
+        "electron": "^14.0.0",
+        "electron-builder": "^22.11.7"
+    },
+    "dependencies": {
+        "express": "^4.17.1"
+    }
 }

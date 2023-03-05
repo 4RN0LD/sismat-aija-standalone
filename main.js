@@ -12,6 +12,7 @@ function createWindow() {
         // icon: path.join(__dirname, 'assets', 'img', 'icon.png'),
         title: 'SISMAT',
     });
+    win.maximize();
     win.setTitle('SISTEMA MUNICIPAL DE ADMINISTRACION TRIBUTARIA - SISMAT');
     win.setMenuBarVisibility(false);
     win.loadURL("http://localhost:3000/#/")
