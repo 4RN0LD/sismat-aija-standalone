@@ -1,5 +1,6 @@
-const { app, BrowserWindow } = require('electron')
-require("./server.js")
+const { app, BrowserWindow } = require('electron');
+const { autoUpdater } = require('electron-updater');
+require("./server.js");
 
 function createWindow() {
     const win = new BrowserWindow({
@@ -15,7 +16,8 @@ function createWindow() {
     win.maximize();
     win.setTitle('SISTEMA MUNICIPAL DE ADMINISTRACION TRIBUTARIA - SISMAT');
     win.setMenuBarVisibility(false);
-    win.loadURL("http://localhost:3000/#/")
+    win.loadURL("http://localhost:3000/#/login");
+    autoUpdater.checkForUpdatesAndNotify();
 }
 
 app.whenReady().then(createWindow);
