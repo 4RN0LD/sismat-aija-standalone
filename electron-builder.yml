@@ -1,6 +1,0 @@
-publish:
-  provider: generic
-  url: https://gitlab.com/api/v4/projects/spa-desktop/packages/generic/
-  channel: latest
-  headers:
-    Private-Token: "glpat-AiwZhepL-ZVgQzJaiU1s"
