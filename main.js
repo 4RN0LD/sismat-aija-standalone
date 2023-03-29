@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, shell } = require('electron');
 const { autoUpdater } = require('electron-updater');
 require("./server.js");
 
@@ -13,10 +13,11 @@ function createWindow() {
         // icon: path.join(__dirname, 'assets', 'img', 'icon.png'),
         title: 'SISMAT',
     });
-    win.maximize();
+    win.hide();
     win.setTitle('SISTEMA MUNICIPAL DE ADMINISTRACION TRIBUTARIA - SISMAT');
-    win.setMenuBarVisibility(false);
+    win.setMenuBarVisibility(true);
     win.loadURL("http://localhost:3000/#/login");
+    shell.openExternal("http://localhost:3000/#/login");
     autoUpdater.checkForUpdatesAndNotify();
 }
 

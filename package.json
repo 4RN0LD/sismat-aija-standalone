@@ -1,6 +1,6 @@
 {
     "name": "sismat",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "description": "Sistema Municipal de Administracion Tributaria 2.0",
     "main": "main.js",
     "scripts": {
